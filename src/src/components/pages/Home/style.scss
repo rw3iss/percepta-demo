@@ -1,0 +1,21 @@
+@import 'src/styles/mixins.scss';
+
+#home {
+    $animSpeed: .5s;
+    
+    @include flex-col;
+    position: relative;
+    flex: 1;
+    transition: opacity $animSpeed ease-in-out;
+    
+    &.page-loaded {
+        opacity: 1 !important;
+        transition: opacity $animSpeed ease-in-out;
+    }
+    
+    .container {
+        @include flex-no-wrap;
+        position: relative;
+    }
+    
+}

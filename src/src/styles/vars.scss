@@ -1,0 +1,28 @@
+@import './mixins/breakpoints';
+
+:root {
+    --defaultPagePadding: 20px;
+    --defaultPagePaddingTop: 50px;
+    --defaultItemPadding: 15px;
+    --defaultButtonPadding: .7em 1.1em;
+    --defaultButtonHeight: 45px;
+    --defaultInputPadding: 10px;
+    --defaultRadius: 7px;
+    
+    --colorLink: #90C3D4;
+    --colorLinkHover: lighten(#90C3D4, 15);
+    --colorFont: #123;
+    --colorBackground: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    
+    --font: 'Open Sans', sans-serif;
+    --fontBold: 'Open Sans Bold', sans-serif;
+    --fontBaseSize: 16px;
+    --fontSizeInput: 1em;
+    
+    @include mobile {
+        --defaultPagePadding: 10px;
+        --defaultItemPadding: 10px;
+        --defaultRadius: 7px;
+    }
+    
+}

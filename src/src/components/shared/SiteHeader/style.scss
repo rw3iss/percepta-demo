@@ -1,0 +1,102 @@
+@import 'src/styles/mixins.scss';
+
+#site-header {
+    @include flex-col-center;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	height: auto;
+    width: 0;
+
+	.inner {
+        position: absolute;
+		height: auto;
+        opacity: .8;
+        border-bottom-left-radius: var(--defaultRadius);
+        border-bottom-right-radius: var(--defaultRadius);
+        box-shadow: 2px 2px 4px rgba(0,0,0,.8);
+        transition: all .35s ease;
+        z-index: 1;
+
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+47,d8d8d8+100 */
+        background: rgb(255,255,255); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(255,255,255,1) 47%, rgba(216,216,216,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 47%,rgba(216,216,216,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255,255,255,1) 47%,rgba(216,216,216,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
+
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+        
+		.logo {
+			display: none;
+			height: 20px;
+			width: 100%;
+			padding: 14px;
+			letter-spacing: 2px;
+			text-align: center;
+			font-size: .7em;
+			font-weight: bold;
+			color: var(--colorBackground);
+			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+            cursor: pointer;
+		}
+
+		.nav-items {
+			a {
+				height: 100%;
+				color: black;
+				font-weight: bold;
+				font-family: var(--fontBold);
+				font-size: 1.2em;
+				padding: var(--defaultItemPadding) calc(var(--defaultItemPadding)*2);
+				transition: background-color .35s ease;
+				
+				&:hover {
+					background: darken(white, 10%);
+					cursor: pointer;
+				}
+
+				&:first-child {
+					border-bottom-left-radius: var(--defaultRadius);
+				}
+
+				&:last-child {
+					border-bottom-right-radius: var(--defaultRadius);
+				}
+			}
+		}
+	}
+
+
+    @include mobile {
+        position: relative;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        
+        .inner {
+            width: 100%;
+            
+            .logo {
+            }
+
+            .nav-items {
+                width: 100%;
+                max-width: 100%;
+
+                a {
+                    padding: var(--defaultItemPadding) 0;
+                    flex: 1;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+    
+}

@@ -29,7 +29,7 @@ export default class Home extends Component {
 
                 <div class="container">
                     
-                    <Button class="small" click={this.onClick}>Click Me</Button>
+                    <Button class="small inline" click={this.onClick}>Click Me</Button>
 
                     { this.state.showForm && 
                         <div class="form">

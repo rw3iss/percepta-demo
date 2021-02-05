@@ -1,4 +1,4 @@
-/* src/components/pages/Home/style.scss */
+/* app/components/pages/Home/style.scss */
 :root {
   --defaultPagePadding: 20px;
   --defaultPagePaddingTop: 50px;
@@ -26,9 +26,11 @@
 }
 #home {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   position: relative;
   flex: 1;
+  align-items: flex-start;
   transition: opacity 0.5s ease-in-out;
 }
 #home.page-loaded {
@@ -37,11 +39,12 @@
 }
 #home .container {
   display: flex;
-  flex-wrap: nowrap;
+  align-items: flex-start;
+  flex-direction: column;
   position: relative;
 }
 
-/* src/components/shared/SiteHeader/style.scss */
+/* app/components/shared/SiteHeader/style.scss */
 :root {
   --defaultPagePadding: 20px;
   --defaultPagePaddingTop: 50px;
@@ -69,6 +72,7 @@
 }
 #site-header {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   align-items: center;
   position: absolute;
@@ -152,7 +156,7 @@
   }
 }
 
-/* src/components/style.scss */
+/* app/components/style.scss */
 :root {
   --defaultPagePadding: 20px;
   --defaultPagePaddingTop: 50px;
@@ -239,6 +243,7 @@ a:hover {
 }
 .button {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   min-height: var(--defaultButtonHeight);
   padding: var(--defaultButtonPadding);
@@ -287,6 +292,7 @@ select::placeholder {
 .page {
   flex: 1;
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   max-width: 100%;
   padding: var(--defaultPagePaddingTop) var(--defaultPagePadding) var(--defaultPagePadding);
@@ -448,6 +454,7 @@ iframe {
 }
 #app {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   height: 100%;
   max-height: 100%;
@@ -456,6 +463,7 @@ iframe {
 }
 #app .content-wrapper {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   flex: 1;
   width: 100%;
@@ -463,6 +471,7 @@ iframe {
 }
 #app .content-wrapper .page-wrapper {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   flex: 1;
   width: 100%;

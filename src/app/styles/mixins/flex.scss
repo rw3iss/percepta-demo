@@ -1,14 +1,15 @@
 @mixin flex() { 
     display: flex;
+    align-items: flex-start;
 }
 
 @mixin flex-no-wrap() {
-    display: flex;
+    @include flex();
     flex-wrap: nowrap;
 }
 
 @mixin flex-col() {
-    display: flex;
+    @include flex();
     flex-direction: column;
 }
 
@@ -18,8 +19,7 @@
 }
 
 @mixin flex-center() {
-    display: flex;
-    flex-wrap: nowrap;
+    @include flex-no-wrap();
     align-items: center;
     justify-content: center;
 }

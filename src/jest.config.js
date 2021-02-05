@@ -14,9 +14,8 @@ module.exports = {
     testEnvironment: "node",
     moduleNameMapper: {
         "\\.(scss|sass|css)$": "<rootDir>/tests/__mocks__/styleMock.js",
-        "^styles/(.*)$": "<rootDir>/tests/__mocks__/styleMock.js",
-        "^src/(.*)$": "<rootDir>/src/$1",
-        "^components/(.*)$": "<rootDir>/src/components/$1"
+        "^app/(.*)$": "<rootDir>/app/$1",
+        "^components/(.*)$": "<rootDir>/app/components/$1"
     }
 
   }

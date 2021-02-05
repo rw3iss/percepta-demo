@@ -1,4 +1,4 @@
-@import 'src/styles/mixins.scss';
+@import 'app/styles/mixins.scss';
 
 #home {
     $animSpeed: .5s;
@@ -6,6 +6,7 @@
     @include flex-col;
     position: relative;
     flex: 1;
+    align-items: flex-start;
     transition: opacity $animSpeed ease-in-out;
     
     &.page-loaded {
@@ -14,7 +15,7 @@
     }
     
     .container {
-        @include flex-no-wrap;
+        @include flex-col;
         position: relative;
     }
     

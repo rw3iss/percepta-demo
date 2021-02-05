@@ -14,14 +14,4 @@ describe('App', () => {
 
         expect(app.contains(logo)).toEqual(true);
     });
-
-    it('should click the button', () => {
-        const app = mount(<App />);
-
-        const formText = 'Search for a movie:';
-
-        app.find('.button').simulate('click');
-
-        expect(app.contains(formText)).toEqual(true);
-    });
 });

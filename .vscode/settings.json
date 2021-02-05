@@ -1,12 +1,9 @@
 {
   "files.exclude": {
-    "src/hot-launch.js": true,
     "src/package-lock.json": true,
     "src/dev.sh": true,
     "src/setup.sh": true,
     "src/test.sh": true,
-    "src/tsconfig.json": true,
-    "src/build.js": true,
     ".vscode": true,
     ".gitignore": true
   }

@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { Link } from 'preact-router/match';
+
 import './style.scss';
 
 export default class SiteHeader extends Component {

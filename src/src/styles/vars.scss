@@ -19,6 +19,8 @@
     --fontBaseSize: 16px;
     --fontSizeInput: 1em;
     
+    --animDefault: .35s;
+    
     @include mobile {
         --defaultPagePadding: 10px;
         --defaultItemPadding: 10px;

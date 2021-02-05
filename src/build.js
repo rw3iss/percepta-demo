@@ -65,23 +65,6 @@ let scssPlugin = {
     }
 };
 
-let copyPlugin = {
-    name: 'copy',
-    setup(build) {
-        let fs = require('fs');
-        // todo: pull config array of files/directories
-        fs.copyFile('src/index.html', 'build/index.html', (err) => {
-            if (err) throw err;
-        });
-
-        // todo: copy src/static folder to build/static... if it differs?
-        // fs.copyFile('src/index.html', 'build/index.html', (err) => {
-        //     if (err) throw err;
-        // });
-    }
-}
-
-
 // let definePlugin = {
 //     name: 'define',
 //     setup(build) {

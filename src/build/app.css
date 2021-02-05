@@ -15,6 +15,7 @@
   --fontBold: "Open Sans Bold", sans-serif;
   --fontBaseSize: 16px;
   --fontSizeInput: 1em;
+  --animDefault: .35s;
 }
 @media only screen and (min-device-width: 0px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
   :root {
@@ -57,6 +58,7 @@
   --fontBold: "Open Sans Bold", sans-serif;
   --fontBaseSize: 16px;
   --fontSizeInput: 1em;
+  --animDefault: .35s;
 }
 @media only screen and (min-device-width: 0px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
   :root {
@@ -167,6 +169,7 @@
   --fontBold: "Open Sans Bold", sans-serif;
   --fontBaseSize: 16px;
   --fontSizeInput: 1em;
+  --animDefault: .35s;
 }
 @media only screen and (min-device-width: 0px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
   :root {
@@ -191,6 +194,7 @@
   --fontBold: "Open Sans Bold", sans-serif;
   --fontBaseSize: 16px;
   --fontSizeInput: 1em;
+  --animDefault: .35s;
 }
 @media only screen and (min-device-width: 0px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
   :root {
@@ -238,34 +242,47 @@ a:hover {
   flex-direction: column;
   min-height: var(--defaultButtonHeight);
   padding: var(--defaultButtonPadding);
-  background: #345;
   font-size: 1rem;
-  color: white;
+  font-weight: bold;
+  color: #eee;
+  letter-spacing: 1px;
   border-radius: var(--defaultRadius);
   display: inline-flex;
-  transition: all .3s ease;
+  background: #506274;
+  background: linear-gradient(180deg, #506274 0%, #2c3c4d 72%, #19232e 100%);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
 }
 .button.small {
+  font-size: .85rem;
   min-height: calc(var(--defaultButtonHeight) * .75);
 }
 .button:hover {
   cursor: pointer;
+  color: #fff;
+  background: #5b6e82;
+  background: linear-gradient(180deg, #5b6e82 0%, #35485c 72%, #212d3b 100%);
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
-  transition: all .3s ease;
+}
+.button:active {
+  position: relative;
+  top: 1px;
 }
 input,
 textarea,
 select {
   padding: var(--defaultInputPadding);
   font-size: var(--fontSizeInput);
-  border-radius: var(--defaultRadius);
-  background: #123;
-  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.7);
-  color: white;
-  outline: none;
   border: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  border-radius: var(--defaultRadius);
+  outline: none;
+  color: white;
+  background: #323c46;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: #aaa;
 }
 .page {
   flex: 1;
@@ -343,8 +360,7 @@ input,
 select,
 textarea,
 iframe {
-  border: none;
-  border-radius: 0;
+  appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
 }

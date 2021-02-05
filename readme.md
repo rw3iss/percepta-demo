@@ -1,6 +1,6 @@
 # Description
 * Built on Preact.
-* Uses ebuild as builder, with sass integration. 
+* Uses esbuild as builder, with sass integration. 
 
 ## For Development:
 * Nodemon is used to monitor source files and rebuild them to build folder. 

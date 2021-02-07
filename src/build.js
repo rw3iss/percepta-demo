@@ -38,7 +38,7 @@ let scssPlugin = {
     setup(build) {
         const fs = require('fs');
         const sass = require('node-sass');
-        const aliasImporter = require("node-sass-alias-importer");
+        //const aliasImporter = require("node-sass-alias-importer");
         const path = require('path');
 
         build.onLoad({ filter: /\.(scss)$/ }, async (args) => {
@@ -51,10 +51,7 @@ let scssPlugin = {
                         data,
                         //includePaths: [], // todo: dynamically add global imports??
                         sourceComments: true,
-                        sourceMap: true,
-                        // importer: aliasImporter({
-                        //     styles: "./app/styles/mixins"
-                        // })
+                        sourceMap: true
                     });
                     contents = result.css;
                 }

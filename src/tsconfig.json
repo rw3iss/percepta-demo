@@ -22,7 +22,6 @@
             "config/*":     ["config/*"],
             "data/*":       ["data/*"],
             "styles/*":     ["./app/styles/*"],
-            "@styles/*":     ["./app/styles/*"],
             "utils/*":      ["utils/*"]
         }
     },

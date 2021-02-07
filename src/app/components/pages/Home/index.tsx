@@ -8,7 +8,6 @@ export default class Home extends Component {
     page = createRef();
 
     state = {
-        showForm: false
     }
 
     componentWillMount() {
@@ -18,28 +17,15 @@ export default class Home extends Component {
         this.page.current.classList.add('page-loaded');
     }
 
-    onClick = () => {
-        console.log('clicked');
-        this.setState({ showForm: true })
-    }
-
     render() {
         return (
             <div class="page" id="home" style="opacity: 0;" ref={this.page}>
 
                 <div class="container">
-                    
-                    <Button class="small inline" click={this.onClick}>Click Me</Button>
-
-                    { this.state.showForm && 
-                        <div class="form">
-                            
-                            Search for a movie:
-
-                            <input type="text" placeholder="Search..."/>
-
-                        </div>
-                    }
+                
+                    <div class="form">
+                        
+                    </div>
 
                 </div>
 

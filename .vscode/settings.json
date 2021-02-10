@@ -5,10 +5,9 @@
     "src/setup.sh": true,
     "src/test.sh": true,
     ".vscode": true,
-    ".gitignore": true,
-    "src/hot-launch.js": true,
     "src/jest.config.js": true,
     "src/node_modules": true,
+    ".gitignore": true,
     "src/build": true
   }
 }

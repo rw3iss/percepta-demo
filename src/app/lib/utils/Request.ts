@@ -1,7 +1,6 @@
 import fetch from 'isomorphic-fetch';
 import Cookies from './Cookies';
 
-
 const _getAccessToken = () => Cookies.get('token');
 
 // adds Authorization header with JWT token, etc...

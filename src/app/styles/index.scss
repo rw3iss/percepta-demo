@@ -1,9 +1,9 @@
-@import './vars.scss';
-@import './mixins.scss';
+@import './vars';
+@import './mixins';
 
-@import './common/global.scss';
-@import './common/controls.scss';
-@import './common/page.scss';
-@import './common/fonts.scss';
-@import './common/normalize.scss';
-@import './common/flex.scss';
+@import './common/global';
+@import './common/normalize';
+@import './common/fonts';
+@import './common/layout';
+@import './common/page';
+@import './common/controls/index';

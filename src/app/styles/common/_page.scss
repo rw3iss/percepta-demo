@@ -3,6 +3,7 @@
 .page {
     flex: 1;
     @include flex-col;
+    width: 100%;
 	max-width: 100%;
 	padding: var(--defaultPagePaddingTop) var(--defaultPagePadding) var(--defaultPagePadding);
 

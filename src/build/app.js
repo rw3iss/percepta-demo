@@ -65,7 +65,7 @@
       var r2 = {type: l2, props: u2, key: t2, ref: i2, __k: null, __: null, __b: 0, __e: null, __d: void 0, __c: null, __h: null, constructor: void 0, __v: o2 == null ? ++n.__v : o2};
       return n.vnode != null && n.vnode(r2), r2;
     }
-    function h7(n2) {
+    function h6(n2) {
       return n2.children;
     }
     function y(n2, l2) {
@@ -105,7 +105,7 @@
     function x(n2, l2, u2, t2, i2, o2, r2, c2, s2, p2) {
       var y2, _2, w2, k2, x2, b2, A2, P2 = t2 && t2.__k || e, C2 = P2.length;
       for (s2 == f && (s2 = r2 != null ? r2[0] : C2 ? d(t2, 0) : null), u2.__k = [], y2 = 0; y2 < l2.length; y2++)
-        if ((k2 = u2.__k[y2] = (k2 = l2[y2]) == null || typeof k2 == "boolean" ? null : typeof k2 == "string" || typeof k2 == "number" ? v(null, k2, null, null, k2) : Array.isArray(k2) ? v(h7, {children: k2}, null, null, null) : k2.__b > 0 ? v(k2.type, k2.props, k2.key, null, k2.__v) : k2) != null) {
+        if ((k2 = u2.__k[y2] = (k2 = l2[y2]) == null || typeof k2 == "boolean" ? null : typeof k2 == "string" || typeof k2 == "number" ? v(null, k2, null, null, k2) : Array.isArray(k2) ? v(h6, {children: k2}, null, null, null) : k2.__b > 0 ? v(k2.type, k2.props, k2.key, null, k2.__v) : k2) != null) {
           if (k2.__ = u2, k2.__b = u2.__b + 1, (w2 = P2[y2]) === null || w2 && k2.key == w2.key && k2.type === w2.type)
             P2[y2] = void 0;
           else
@@ -200,7 +200,7 @@
                 p2.componentDidUpdate(d2, _2, w2);
               });
             }
-            p2.context = b2, p2.props = g2, p2.state = p2.__s, (a2 = n.__r) && a2(u2), p2.__d = false, p2.__v = u2, p2.__P = l2, a2 = p2.render(p2.props, p2.state, p2.context), p2.state = p2.__s, p2.getChildContext != null && (i2 = s(s({}, i2), p2.getChildContext())), v2 || p2.getSnapshotBeforeUpdate == null || (w2 = p2.getSnapshotBeforeUpdate(d2, _2)), A2 = a2 != null && a2.type === h7 && a2.key == null ? a2.props.children : a2, x(l2, Array.isArray(A2) ? A2 : [A2], u2, t2, i2, o2, r2, f2, e2, c2), p2.base = u2.__e, u2.__h = null, p2.__h.length && f2.push(p2), k2 && (p2.__E = p2.__ = null), p2.__e = false;
+            p2.context = b2, p2.props = g2, p2.state = p2.__s, (a2 = n.__r) && a2(u2), p2.__d = false, p2.__v = u2, p2.__P = l2, a2 = p2.render(p2.props, p2.state, p2.context), p2.state = p2.__s, p2.getChildContext != null && (i2 = s(s({}, i2), p2.getChildContext())), v2 || p2.getSnapshotBeforeUpdate == null || (w2 = p2.getSnapshotBeforeUpdate(d2, _2)), A2 = a2 != null && a2.type === h6 && a2.key == null ? a2.props.children : a2, x(l2, Array.isArray(A2) ? A2 : [A2], u2, t2, i2, o2, r2, f2, e2, c2), p2.base = u2.__e, u2.__h = null, p2.__h.length && f2.push(p2), k2 && (p2.__E = p2.__ = null), p2.__e = false;
           } else
             r2 == null && u2.__v === t2.__v ? (u2.__k = t2.__k, u2.__e = t2.__e) : u2.__e = $(t2.__e, u2, t2, i2, o2, r2, f2, c2);
         (a2 = n.diffed) && a2(u2);
@@ -220,7 +220,7 @@
       });
     }
     function $(n2, l2, u2, t2, i2, o2, r2, c2) {
-      var s2, a2, p2, v2, h8, y2 = u2.props, d2 = l2.props;
+      var s2, a2, p2, v2, h7, y2 = u2.props, d2 = l2.props;
       if (i2 = l2.type === "svg" || i2, o2 != null) {
         for (s2 = 0; s2 < o2.length; s2++)
           if ((a2 = o2[s2]) != null && ((l2.type === null ? a2.nodeType === 3 : a2.localName === l2.type) || n2 == a2)) {
@@ -238,8 +238,8 @@
       else {
         if (o2 != null && (o2 = e.slice.call(n2.childNodes)), p2 = (y2 = u2.props || f).dangerouslySetInnerHTML, v2 = d2.dangerouslySetInnerHTML, !c2) {
           if (o2 != null)
-            for (y2 = {}, h8 = 0; h8 < n2.attributes.length; h8++)
-              y2[n2.attributes[h8].name] = n2.attributes[h8].value;
+            for (y2 = {}, h7 = 0; h7 < n2.attributes.length; h7++)
+              y2[n2.attributes[h7].name] = n2.attributes[h7].value;
           (v2 || p2) && (v2 && (p2 && v2.__html == p2.__html || v2.__html === n2.innerHTML) || (n2.innerHTML = v2 && v2.__html || ""));
         }
         b(n2, d2, y2, i2, c2), v2 ? l2.__k = [] : (s2 = l2.props.children, x(n2, Array.isArray(s2) ? s2 : [s2], l2, u2, t2, l2.type !== "foreignObject" && i2, o2, r2, f, c2)), c2 || ("value" in d2 && (s2 = d2.value) !== void 0 && (s2 !== n2.value || l2.type === "progress" && !s2) && P(n2, "value", s2, y2.value, false), "checked" in d2 && (s2 = d2.checked) !== void 0 && s2 !== n2.checked && P(n2, "checked", s2, y2.checked, false));
@@ -274,7 +274,7 @@
     }
     function I(l2, u2, t2) {
       var i2, r2, c2;
-      n.__ && n.__(l2, u2), r2 = (i2 = t2 === o) ? null : t2 && t2.__k || u2.__k, l2 = p(h7, null, [l2]), c2 = [], N(u2, (i2 ? u2 : t2 || u2).__k = l2, r2 || f, f, u2.ownerSVGElement !== void 0, t2 && !i2 ? [t2] : r2 ? null : u2.childNodes.length ? e.slice.call(u2.childNodes) : null, c2, t2 || f, i2), T(c2, l2);
+      n.__ && n.__(l2, u2), r2 = (i2 = t2 === o) ? null : t2 && t2.__k || u2.__k, l2 = p(h6, null, [l2]), c2 = [], N(u2, (i2 ? u2 : t2 || u2).__k = l2, r2 || f, f, u2.ownerSVGElement !== void 0, t2 && !i2 ? [t2] : r2 ? null : u2.childNodes.length ? e.slice.call(u2.childNodes) : null, c2, t2 || f, i2), T(c2, l2);
     }
     n = {__e: function(n2, l2) {
       for (var u2, t2, i2, o2 = l2.__h; l2 = l2.__; )
@@ -293,9 +293,9 @@
       u2 = this.__s != null && this.__s !== this.state ? this.__s : this.__s = s({}, this.state), typeof n2 == "function" && (n2 = n2(s({}, u2), this.props)), n2 && s(u2, n2), n2 != null && this.__v && (l2 && this.__h.push(l2), w(this));
     }, y.prototype.forceUpdate = function(n2) {
       this.__v && (this.__e = true, n2 && this.__h.push(n2), w(this));
-    }, y.prototype.render = h7, u = [], t = typeof Promise == "function" ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, k.__r = 0, o = f, r = 0, exports.render = I, exports.hydrate = function(n2, l2) {
+    }, y.prototype.render = h6, u = [], t = typeof Promise == "function" ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, k.__r = 0, o = f, r = 0, exports.render = I, exports.hydrate = function(n2, l2) {
       I(n2, l2, o);
-    }, exports.createElement = p, exports.h = p, exports.Fragment = h7, exports.createRef = function() {
+    }, exports.createElement = p, exports.h = p, exports.Fragment = h6, exports.createRef = function() {
       return {current: null};
     }, exports.isValidElement = l, exports.Component = y, exports.cloneElement = function(n2, l2, u2) {
       var t2, i2, o2, r2 = arguments, f2 = s({}, n2.props);
@@ -350,13 +350,13 @@
         t2 = i(t2.replace(o2, "")), e2 = i(e2 || "");
         for (var l2 = Math.max(t2.length, e2.length), s2 = 0; s2 < l2; s2++)
           if (e2[s2] && e2[s2].charAt(0) === ":") {
-            var h8 = e2[s2].replace(/(^:|[+*?]+$)/g, ""), d2 = (e2[s2].match(/[+*?]+$/) || C)[0] || "", g2 = ~d2.indexOf("+"), y2 = ~d2.indexOf("*"), m2 = t2[s2] || "";
+            var h7 = e2[s2].replace(/(^:|[+*?]+$)/g, ""), d2 = (e2[s2].match(/[+*?]+$/) || C)[0] || "", g2 = ~d2.indexOf("+"), y2 = ~d2.indexOf("*"), m2 = t2[s2] || "";
             if (!m2 && !y2 && (d2.indexOf("?") < 0 || g2)) {
               r2 = false;
               break;
             }
-            if (a2[h8] = decodeURIComponent(m2), g2 || y2) {
-              a2[h8] = t2.slice(s2).map(decodeURIComponent).join("/");
+            if (a2[h7] = decodeURIComponent(m2), g2 || y2) {
+              a2[h7] = t2.slice(s2).map(decodeURIComponent).join("/");
               break;
             }
           } else if (e2[s2] !== t2[s2]) {
@@ -391,7 +391,7 @@
         return t2 = b && b.location ? b.location : b && b.getCurrentLocation ? b.getCurrentLocation() : typeof location != "undefined" ? location : x, "" + (t2.pathname || "") + (t2.search || "");
       }
       function l(t2, e2) {
-        return e2 === void 0 && (e2 = false), typeof t2 != "string" && t2.url && (e2 = t2.replace, t2 = t2.url), s(t2) && c(t2, e2 ? "replace" : "push"), h7(t2);
+        return e2 === void 0 && (e2 = false), typeof t2 != "string" && t2.url && (e2 = t2.replace, t2 = t2.url), s(t2) && c(t2, e2 ? "replace" : "push"), h6(t2);
       }
       function s(t2) {
         for (var e2 = U.length; e2--; )
@@ -399,7 +399,7 @@
             return true;
         return false;
       }
-      function h7(t2) {
+      function h6(t2) {
         for (var e2 = false, n2 = 0; n2 < U.length; n2++)
           U[n2].routeTo(t2) === true && (e2 = true);
         for (var r2 = k.length; r2--; )
@@ -435,7 +435,7 @@
       }
       function v() {
         A || (typeof addEventListener == "function" && (b || addEventListener("popstate", function() {
-          h7(f());
+          h6(f());
         }), addEventListener("click", m)), A = true);
       }
       var C = {}, b = null, U = [], k = [], x = {}, A = false, R = function(i2) {
@@ -556,7 +556,7 @@
       Match2.prototype.componentWillUnmount = function componentWillUnmount() {
         _preactRouter.subscribers.splice(_preactRouter.subscribers.indexOf(this.update) >>> 0, 1);
       };
-      Match2.prototype.render = function render3(props) {
+      Match2.prototype.render = function render2(props) {
         var url = this.nextUrl || (0, _preactRouter.getCurrentUrl)(), path = url.replace(/\?.+$/, "");
         this.nextUrl = null;
         return props.children({
@@ -580,10 +580,10 @@
   });
 
   // app/index.tsx
-  var preact6 = __toModule(require_preact());
+  var preact5 = __toModule(require_preact());
 
   // app/components/App.tsx
-  var preact5 = __toModule(require_preact());
+  var preact4 = __toModule(require_preact());
 
   // app/components/shared/SiteHeader/index.tsx
   var preact = __toModule(require_preact());
@@ -605,39 +605,16 @@
   var SiteHeader_default = SiteHeader;
 
   // app/components/Routes.tsx
-  var preact4 = __toModule(require_preact());
+  var preact3 = __toModule(require_preact());
   var preact_router = __toModule(require_preact_router());
 
   // app/components/pages/Home/index.tsx
-  var preact3 = __toModule(require_preact());
-
-  // app/components/shared/Button/index.tsx
   var preact2 = __toModule(require_preact());
-  var Button = class extends preact2.Component {
-    constructor(props) {
-      super(props);
-    }
-    render(props) {
-      return /* @__PURE__ */ preact2.h("div", {
-        class: "button" + (this.props.class ? ` ${this.props.class}` : ""),
-        onClick: props.click ? props.click : () => null
-      }, props.children);
-    }
-  };
-  var Button_default = Button;
-
-  // app/components/pages/Home/index.tsx
-  var Home = class extends preact3.Component {
+  var Home = class extends preact2.Component {
     constructor() {
       super(...arguments);
-      this.page = preact3.createRef();
-      this.state = {
-        showForm: false
-      };
-      this.onClick = () => {
-        console.log("clicked");
-        this.setState({showForm: true});
-      };
+      this.page = preact2.createRef();
+      this.state = {};
     }
     componentWillMount() {
     }
@@ -645,30 +622,24 @@
       this.page.current.classList.add("page-loaded");
     }
     render() {
-      return /* @__PURE__ */ preact3.h("div", {
+      return /* @__PURE__ */ preact2.h("div", {
         class: "page",
         id: "home",
         style: "opacity: 0;",
         ref: this.page
-      }, /* @__PURE__ */ preact3.h("div", {
+      }, /* @__PURE__ */ preact2.h("div", {
         class: "container"
-      }, /* @__PURE__ */ preact3.h(Button_default, {
-        class: "small inline",
-        click: this.onClick
-      }, "Click Me"), this.state.showForm && /* @__PURE__ */ preact3.h("div", {
+      }, /* @__PURE__ */ preact2.h("div", {
         class: "form"
-      }, "Search for a movie:", /* @__PURE__ */ preact3.h("input", {
-        type: "text",
-        placeholder: "Search..."
-      }))));
+      })));
     }
   };
   var Home_default = Home;
 
   // app/components/Routes.tsx
-  var Routes = class extends preact4.Component {
+  var Routes = class extends preact3.Component {
     render() {
-      return /* @__PURE__ */ preact4.h(preact_router.default, null, /* @__PURE__ */ preact4.h(Home_default, {
+      return /* @__PURE__ */ preact3.h(preact_router.default, null, /* @__PURE__ */ preact3.h(Home_default, {
         path: "/"
       }));
     }
@@ -676,15 +647,15 @@
   var Routes_default = Routes;
 
   // app/components/App.tsx
-  var App = class extends preact5.Component {
+  var App = class extends preact4.Component {
     render() {
-      return /* @__PURE__ */ preact5.h("div", {
+      return /* @__PURE__ */ preact4.h("div", {
         id: "app"
-      }, /* @__PURE__ */ preact5.h("div", {
+      }, /* @__PURE__ */ preact4.h("div", {
         class: "content-wrapper"
-      }, /* @__PURE__ */ preact5.h(SiteHeader_default, null), /* @__PURE__ */ preact5.h("div", {
+      }, /* @__PURE__ */ preact4.h(SiteHeader_default, null), /* @__PURE__ */ preact4.h("div", {
         class: "page-wrapper"
-      }, /* @__PURE__ */ preact5.h(Routes_default, null))));
+      }, /* @__PURE__ */ preact4.h(Routes_default, null))));
     }
   };
   var App_default = App;
@@ -692,7 +663,7 @@
   // app/index.tsx
   var app = document.getElementById("app");
   if (app) {
-    preact6.render(/* @__PURE__ */ preact6.h(App_default, null), app, app);
+    preact5.render(/* @__PURE__ */ preact5.h(App_default, null), app, app);
   } else {
     alert("Couldn't find app mount point.");
   }

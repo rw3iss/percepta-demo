@@ -1,12 +1,16 @@
 @import './mixins/breakpoints';
 
 :root {
+    --defaultItemPadding: 15px;
+    
     --defaultPagePadding: 20px;
     --defaultPagePaddingTop: 50px;
-    --defaultItemPadding: 15px;
+    
     --defaultButtonPadding: .7em 1.1em;
     --defaultButtonHeight: 45px;
+    
     --defaultInputPadding: 10px;
+    
     --defaultRadius: 7px;
     
     --colorLink: #90C3D4;

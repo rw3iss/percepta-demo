@@ -1,6 +1,4 @@
 import { h, Component, createRef } from 'preact';
-import { Link } from 'preact-router/match';
-import Button from 'components/shared/Button';
 import './style.scss';
 
 export default class Home extends Component {
@@ -22,9 +20,9 @@ export default class Home extends Component {
             <div class="page" id="home" style="opacity: 0;" ref={this.page}>
 
                 <div class="container">
-                
+
                     <div class="form">
-                        
+
                     </div>
 
                 </div>

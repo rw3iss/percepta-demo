@@ -1,5 +1,25 @@
 // classes that can be applied directly to html elements
 
+.full {
+    width: 100%;
+}
+
+
+//padding helpers
+.pad-tn {
+    padding: calc(var(--defaultItemPadding) * .5);
+}
+
+.pad-md {
+    padding: var(--defaultItemPadding);
+}
+
+.pad-lg {
+    padding: calc(var(--defaultItemPadding) * 1.5);
+}
+
+
+// flexbox helpers
 .flex {
     display: flex;
 	display: -webkit-flex;

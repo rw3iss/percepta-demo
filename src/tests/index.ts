@@ -1,1 +1,1 @@
-import './App.test.tsx';
+require('./App.test');

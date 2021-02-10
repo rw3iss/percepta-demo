@@ -1,0 +1,16 @@
+input, textarea, select {
+    padding: var(--defaultInputPadding);
+    font-size: var(--fontSizeInput);
+    color: white;
+    background: rgb(50,60,70);
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,.7);
+    border: none;
+    border-radius: var(--defaultRadius);
+    outline: none;
+	-moz-appearance: none;
+    -webkit-appearance: none;
+    
+    &::placeholder {
+        color: #aaa;
+    }
+}

@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "baseUrl": "app",
+        "baseUrl": "./app",
         "outDir": "./build/",       // path to output directory
         "sourceMap": true,          // allow sourcemap support
         "strictNullChecks": true,   // enable strict null checks as a best practice
@@ -17,12 +17,12 @@
         "forceConsistentCasingInFileNames": true,
 
         "paths": {
-            "client/*":     ["./*"],
-            "components/*": ["components/*"],
-            "config/*":     ["config/*"],
-            "data/*":       ["data/*"],
-            "styles/*":     ["./app/styles/*"],
-            "utils/*":      ["utils/*"]
+            "app/*":        ["./*"],
+            "components/*": ["./components/*"],
+            "config/*":     ["./config/*"],
+            "data/*":       ["./data/*"],
+            "styles/*":     ["./styles/*"],
+            "utils/*":      ["./lib/utils/*"]
         }
     },
     "include": [

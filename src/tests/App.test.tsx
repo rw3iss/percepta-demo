@@ -9,57 +9,33 @@ configure({ adapter: new Adapter });
 
 jest.mock('isomorphic-fetch');
 
-let ms = new MovieService();
-
-// jest.mock('../app/services/MovieService', () => {
-//     return {
-//         searchMovies: function(query: string) {
-//             console.log('mock search', query);
-
-//             // return new Promise((resolve, reject) => {
-//             //     resolve({
-//             //         "Response": "True",
-//             //         "Search": [
-//             //             { Title: 'Beta Test' },
-//             //             { Title: 'Some Other Movie' }
-//             //         ]
-//             //     });
-//             // })
-//         }
-//     }
-// });
-
-
-// , () => {
-//     return jest.fn().mockImplementation(() => {
-//         return {
-//             searchMovies: function (query: string) {
-//                 console.log('mock search', query);
-//                 return [];
-//             }
-//         }
-//     });
-// });
+jest.mock('../app/services/MovieService', () => require('./__mocks__/MovieService'));
 
 describe('Test the Home component search functionality', () => {
 
-    it('certify http call is made', (done) => {
-        //let ms = new MovieService();
+    it('certify http call is made (mocked)', (done) => {
+        let ms = new MovieService();
 
         ms.searchMovies('test')
             .then(r => {
                 expect(r.Response).toBe("True");
-                expect(r.Search.length).toBe(10);
+                expect(r.Search).toEqual(
+                    expect.arrayContaining([
+                        expect.objectContaining({
+                            Title: 'Beta Test'
+                        })
+                    ])
+                );
+
                 done();
             })
             .catch(e => {
                 console.log('Error', e)
                 throw e;
             });
-
     });
 
-    it('search button searches', () => {
+    it('search button searches and changed state', () => {
         const comp = mount(<Home />);
 
         const input = comp.find('#search-input');
@@ -85,7 +61,8 @@ describe('Test the Home component search functionality', () => {
         setTimeout(() => {
             comp.update();
 
-            expect(comp.find('.result').length).toBe(10);
+            expect(comp.state().searchResults.length).toBeGreaterThan(0);
+            expect(comp.contains('Beta Test')).toEqual(true);
 
             done();
         }, 2000);

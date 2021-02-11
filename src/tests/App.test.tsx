@@ -11,7 +11,36 @@ jest.mock('isomorphic-fetch');
 
 jest.mock('../app/services/MovieService', () => require('./__mocks__/MovieService'));
 
+Comment this block to use real Movie Service.
+jest.mock('../app/services/MovieService');
+// , () => {
+//     return {
+//         default: jest.fn().mockImplementation(() => {
+//             return {
+//                 searchMovies: function (query: string): Promise<any> {
+//                     console.log('mock search', query);
+
+//                     return new Promise((resolve, reject) => {
+//                         return resolve({
+//                             Response: "True",
+//                             Search: [
+//                                 { Title: 'Beta Test' },
+//                                 { Title: 'Some Other Movie' }
+//                             ]
+//                         });
+//                     })
+//                 }
+//             }
+//         })
+//     };
+// });
+
 describe('Test the Home component search functionality', () => {
+
+
+    beforeEach(() => {
+        jest.mock('../app/services/MovieService')
+    })
 
     it('certify http call is made (mocked)', (done) => {
         let ms = new MovieService();

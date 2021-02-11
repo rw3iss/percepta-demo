@@ -13,7 +13,7 @@ export default class SiteHeader extends Component {
 
                     <Link href="/" class="logo">Percepta</Link>
 
-                    <div class="nav-items flex-row flex-center flex-spread">
+                    <div class="nav-items flex-row flex-center">
                     </div>
 
                 </div>

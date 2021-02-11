@@ -1131,7 +1131,7 @@
         href: "/",
         class: "logo"
       }, "Percepta"), /* @__PURE__ */ preact.h("div", {
-        class: "nav-items flex-row flex-center flex-spread"
+        class: "nav-items flex-row flex-center"
       })));
     }
   };
@@ -1292,7 +1292,7 @@
   var config2 = require_config();
   var API_KEY = config2.omdbApiKey;
   var MovieService = class extends HttpClient_default {
-    searchMovies(query, filter) {
+    searchMovies(query) {
       let url = `http://www.omdbapi.com/?apikey=${API_KEY}&s=${query}`;
       return this.externalRequest(url);
     }
@@ -1356,9 +1356,7 @@
     render() {
       return /* @__PURE__ */ preact3.h("div", {
         class: "page",
-        id: "home",
-        style: "opacity: 0;",
-        ref: this.page
+        id: "home"
       }, /* @__PURE__ */ preact3.h("div", {
         class: "container"
       }, /* @__PURE__ */ preact3.h("div", {

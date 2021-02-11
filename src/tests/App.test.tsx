@@ -11,15 +11,11 @@ jest.mock('isomorphic-fetch');
 
 jest.mock('../app/services/MovieService', () => require('./__mocks__/MovieService'));
 
+let ms = new MovieService();
+
 describe('Test the Home component search functionality', () => {
 
-
-    beforeEach(() => {
-        jest.mock('../app/services/MovieService')
-    })
-
     it('certify http call is made (mocked)', (done) => {
-        let ms = new MovieService();
 
         ms.searchMovies('test')
             .then(r => {

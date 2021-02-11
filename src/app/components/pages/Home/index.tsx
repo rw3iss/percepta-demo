@@ -54,7 +54,7 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div class="page" id="home" style="opacity: 0;">
+            <div class="page" id="home">
 
                 <div class="container">
 
